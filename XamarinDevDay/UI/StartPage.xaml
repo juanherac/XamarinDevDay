@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+x:Class="XamarinDevDay.UI.StartPage">
+
+<Grid>
+
+<Grid.RowDefinitions>
+
+<RowDefinition Height="10*"></RowDefinition>
+
+<RowDefinition Height="90*"></RowDefinition>
+
+</Grid.RowDefinitions>
+
+<ScrollView Grid.Row="1">
+
+<StackLayout>
+
+<Image x:Name="imgImage" WidthRequest="160" HeightRequest="160" Aspect="AspectFit"/>
+
+<Button x:Name="btnCamara" x:Id="btnCamara" Text="Toma una foto" Clicked="BtnCamara_OnClicked"/>
+
+<Button x:Name="btnGaleria" x:Id="btnGaleria" Text="Seleccionar de la galería" Clicked="btnImage_Clicked"/>
+
+<Button x:Name="btnSubirImagen" Text="Analizar imagen" Clicked="btnAnalysisEmotions_Clicked"/>
+
+<Button x:Name="btnDescargarImagen" Text="Enviar resultados de análisis a Mobile Apps" Clicked="btnEnviaResultadosAzure_Clicked"/>
+
+<Label x:Name="lblResult" Text="---" />
+
+<StackLayout x:Name="Results"/>
+
+</StackLayout>
+
+</ScrollView>
+
+<Grid Grid.Row="0" BackgroundColor="Blue">
+
+<Label Text="Xamarin Dev day" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" FontSize="20" TextColor="White"></Label>
+
+</Grid>
+
+<ActivityIndicator Grid.Row="1" x:Name="Indicator" VerticalOptions="Center" HorizontalOptions="Center" Color="White"
+
+HeightRequest="50" WidthRequest="50"></ActivityIndicator>
+
+</Grid>
+
+</ContentPage>
